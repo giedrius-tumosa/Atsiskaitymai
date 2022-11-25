@@ -1,0 +1,12 @@
+/* | EXTERNAL IMPORTS */
+/* Normalize */
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* | INTERNAL IMPORTS */
+@import url(./common.css);
+@import url(./header.css);
+@import url(./main-section.css);
+@import url(./footer.css);
