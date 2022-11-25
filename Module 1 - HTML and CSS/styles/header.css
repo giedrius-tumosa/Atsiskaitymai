@@ -1,0 +1,46 @@
+/* Hamburger */
+.hamburger_menu {
+  width: 25px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.hamburger_part {
+  height: 3px;
+  background-color: #aaaaaa;
+  border-radius: 2px;
+}
+
+/* Header Layout */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+.hidden-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: var(--fs-6);
+  color: var(--color-text-light-1);
+}
+.hidden-menu a:any-link {
+  font-size: var(--fs-6);
+  color: var(--color-text-light-1);
+}
+.hidden-menu a:hover {
+  color: var(--color-theme);
+}
+
+@media (min-width: 750px) {
+  .hidden-menu {
+    display: flex;
+  }
+  .hamburger_menu {
+    display: none;
+  }
+}

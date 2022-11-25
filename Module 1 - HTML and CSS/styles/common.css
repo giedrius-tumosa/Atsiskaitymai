@@ -1,0 +1,72 @@
+/* | Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* | VARIABLES */
+
+:root {
+  /* Colors */
+  --color-theme: #ff3998;
+  --color-text-light-1: #555;
+  --color-text-light-2: #777;
+  --color-text-dark: #111;
+  --color-text-bright: #ff8139;
+
+  /* Fonts */
+  --fs-3: 0.75rem; /*12*/
+  --fs-4: 1rem; /*16*/
+  --fs-5: 1.125rem; /*18*/
+  --fs-6: 1.25rem; /*20*/
+  --fs-7: 1.5rem; /*24*/
+  --fs-8: 2.5rem; /*40*/
+  --fs-9: 3rem; /*46*/
+  --fs-12: 5.625rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-800: 800;
+
+  --ff-global: "Inter", sans-serif;
+
+  /* Media breakpoints */
+  --bp-s: 500px;
+  --bp-m: 900px;
+}
+
+/* | GENERAL STYLES */
+
+body {
+  padding: 1rem 2rem;
+  font-family: var(--ff-global);
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+.page-wrap {
+  max-width: 1210px;
+}
+.hidden-mobile {
+  display: none;
+}
+
+/* | MEDIA QUERIES */
+
+@media (min-width: 750px) {
+  .hidden-mobile {
+    display: block;
+  }
+}
