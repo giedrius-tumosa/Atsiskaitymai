@@ -1,13 +1,12 @@
 /* | GENERAL */
 main > section {
-  border: 1px solid purple;
   padding-block: 3rem;
   position: relative;
+  margin-bottom: 4rem;
 }
 .btn-generic {
   height: 75px;
   width: 188px;
-  /* border: 4px solid #000; */
   border-radius: 37.5px;
   display: flex;
   align-items: center;
@@ -28,6 +27,9 @@ main > section {
   font-size: var(--fs-6);
   line-height: 1.5;
   color: var(--color-text-dark);
+}
+.btn-generic a:hover {
+  opacity: 0.8;
 }
 
 /* | HERO */
@@ -61,10 +63,21 @@ main > section {
 /* Upsell 1 */
 .upsell_1 {
   min-height: 326px;
-  background-image: radial-gradient(circle at center, #ff737f, #f27e5b, #d1c08d);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
+  padding-inline: var(--padding-global);
+}
+.upsell_1::after {
+  content: "";
+  width: 150%;
+  height: 100%;
+  top: 0;
+  transform: translateX(calc(-2 * var(--padding-global)));
+  position: absolute;
+  z-index: -1;
+  background-image: linear-gradient(to right, #f7061a, #ff3c00, #daac23, #33df9d);
 }
 
 .upsell_1 h2 {
@@ -82,7 +95,7 @@ main > section {
   grid-template-columns: repeat(auto-fit, minmax(90px, 150px));
   align-items: center;
   justify-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 2rem 3rem;
 }
 .press figure {
@@ -95,7 +108,20 @@ main > section {
 .logo-hidden {
   display: none;
 }
-
+.press .logo-short {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.press .logo-short::after {
+  content: "";
+  width: 37%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
 /* Showcase */
 .showcase-gallery {
   display: flex;
@@ -182,6 +208,8 @@ main > section {
 
 .upsell_2 {
   position: relative;
+  border-top: 1px solid var(--color-text-light-3);
+  border-bottom: 1px solid var(--color-text-light-3);
 }
 .upsell_2-article {
   width: 60%;
@@ -236,12 +264,22 @@ main > section {
   /* Upsell 1 */
   .upsell_1 {
     border-radius: 15px;
-    padding-inline: 2rem;
+    min-height: 326px;
+    position: unset;
+    width: 100%;
+    background-image: linear-gradient(to right, #f7061a, #ff3c00, #daac23, #33df9d);
+  }
+  .upsell_1::after {
+    all: unset;
   }
 
   /* Press */
   .logo-hidden {
     display: block;
+  }
+  .press .logo-short::after,
+  .logo-short {
+    all: unset;
   }
   .upsell_2 figure {
     position: absolute;
